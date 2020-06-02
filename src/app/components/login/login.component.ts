@@ -7,9 +7,9 @@ import { fakeAsync } from '@angular/core/testing';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  username = '';
-  password = '';
-  confirmPassword = '';
+  username: string = '';
+  password: string = '';
+  confirmPassword: string = '';
   componentState: 'login' | 'create-account' = 'login';
   constructor() { }
 
@@ -63,5 +63,12 @@ export class LoginComponent implements OnInit {
       return;
     }
     console.log(this);
+  }
+
+  login() {
+    if (!this.username || !this.password && (this.username && this.password && this.username.length > 6 && this.password.length > 6) ) {
+      return;
+    }
+
   }
 }
