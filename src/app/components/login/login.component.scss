@@ -1,0 +1,10 @@
+.username-container, .password-container {
+  min-width: 200px;
+  display: flex;
+  max-width: 300px;
+  justify-content: space-between;
+}
+
+.login-form-container {
+  padding: 2em;
+}
